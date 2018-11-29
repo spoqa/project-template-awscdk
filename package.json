@@ -1,0 +1,48 @@
+{
+  "name": "project-template-awscdk",
+  "version": "0.1.0",
+  "description": "Project Template for CDK Apps",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "src/**/*.js"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "deploy": "npm run build && npm run pack && npx cdk deploy",
+    "pack": "npm-pack-zip",
+    "test": "jest",
+    "watch": "tsc --watch"
+  },
+  "author": "Eunchong Yu <gracie@spoqa.com>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@aws-cdk/aws-lambda": "^0.18.1",
+    "@aws-cdk/cdk": "^0.18.1",
+    "@types/aws-lambda": "^8.10.15",
+    "@types/jest": "^23.3.10",
+    "@types/node": "^8.10",
+    "aws-cdk": "^0.18.1",
+    "jest": "^23.6.0",
+    "npm-pack-zip": "^1.2.7",
+    "ts-jest": "^23.10.5",
+    "ts-node": "^7.0.1",
+    "tslint": "^5.11.0",
+    "typescript": "^3.1.6"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "test/.*\\.spec\\.tsx?$",
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "node"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.ts"
+    ]
+  }
+}
